@@ -8,6 +8,7 @@ body {
     background-color: #f4f4f4; /* Light mode background */
 }
 
+
 .container {
     width: 80%;
     margin: 50px auto; /* Add space between containers */
@@ -178,6 +179,63 @@ a {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Professional Experience Section */
+#experience {
+    padding: 50px 0;
+  }
+  
+  .section-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Container for the two experience cards */
+  .experience-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures the cards wrap on smaller screens */
+  }
+  
+  /* Individual experience card */
+  .experience-card {
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    padding: 20px;
+    width: 35%; /* Set a percentage width for the cards to be side by side */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 300px; /* Ensures the card has a minimum width */
+  }
+  
+  /* Title of the job */
+  .experience-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Job details (date and location) */
+  .experience-card p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
+  }
+  
+  /* Description list */
+  .job-description {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .job-description li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+  
+  
+
 /* Form Styles */
 form {
     background-color: #f9f9f9;
@@ -224,3 +282,9 @@ button {
 button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
+
+#success-message {
+    display: none;
+    color: green; /* You can customize this */
+}
+

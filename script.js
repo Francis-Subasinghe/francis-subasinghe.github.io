@@ -1,5 +1,5 @@
 document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+    event.preventDefault();  // Prevent the default form submission behavior
 
     // Gather form data
     const formData = {
@@ -15,15 +15,21 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         console.log("Success!", response.status, response.text);
         
         // Show the success message
-        document.getElementById("success-message").classList.remove("hidden");
+        document.getElementById("success-message").style.display = 'block';
         
         // Reset the form after submission
         document.getElementById("contact-form").reset();
+
+        // Hide the success message after 5 seconds
+        setTimeout(function() {
+            document.getElementById("success-message").style.display = 'none';
+        }, 5000); // Hide after 5 seconds (5000 milliseconds)
     }, function(error) {
         console.error("Failed to send email:", error);
         alert("Error sending message, please try again.");
     });
 });
+
 
 // Toggle dark mode class for the theme
 const toggleButton = document.getElementById("theme-toggle");
