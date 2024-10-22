@@ -98,6 +98,40 @@ a {
     background-color: #0056b3;
 }
 
+/* Hide the navbar and show the hamburger icon on small screens */
+.nav-container nav ul {
+    display: flex;
+}
+
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-container nav ul {
+        display: none; /* Hide the nav links */
+        flex-direction: column; /* Stack them vertically */
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        width: 100%;
+        background-color: white;
+        z-index: 10;
+    }
+
+    .hamburger-menu {
+        display: block; /* Show the hamburger menu */
+    }
+
+    .nav-container nav ul.active {
+        display: flex; /* Show the nav links when the menu is open */
+    }
+}
+
+
 /* Navigation Container */
 .nav-container {
     position: fixed; /* Fix the nav bar at the top */

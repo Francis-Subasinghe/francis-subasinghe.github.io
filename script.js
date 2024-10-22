@@ -104,3 +104,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Regenerate grid on window resize
     window.addEventListener('resize', generateGrid);
 });
+
+document.getElementById("menu-toggle").addEventListener("click", function() {
+    var navbar = document.getElementById("navbar");
+    navbar.classList.toggle("active");
+});
