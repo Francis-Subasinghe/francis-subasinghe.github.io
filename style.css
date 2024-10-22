@@ -1,51 +1,226 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
+    margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #f4f4f4; /* Light mode background */
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.container {
+    width: 80%;
+    margin: 50px auto; /* Add space between containers */
+    overflow: hidden;
 }
 
-nav ul li a {
-    color: white;
+h1, h2, h3 {
+    color: #333; /* Light mode heading color */
+}
+
+a {
+    color: #02040b;
     text-decoration: none;
 }
 
-section {
-    padding: 20px;
-    margin: 20px 0;
+/* Main header without background gradient */
+.main-header {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height for vertical centering */
+    /*background-color: #00c6ff; /* Solid background color */
 }
 
-.project-card {
-    background: #fff;
-    padding: 15px;
+/* Header content box */
+.header-content {
+    background-color: #f9f9f9; /* Light background for the content */
+    padding: 30px 50px; /* Padding inside the container */
+    border-radius: 20px; /* Rounded corners for the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+    text-align: center; /* Center text alignment */
+    width: 300px; /* Fixed width for the header box */
+    position: relative; /* Set position relative to allow absolute positioning of the grid */
+    z-index: 1; /* Ensure it's above the background grid */
+    
+}
+
+.header-content:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.header-title,
+.header-subtitle,
+.header-location {
+    margin: 5px 0; /* Space between lines */
+}
+
+.header-subtitle {
+    white-space: nowrap; /* Prevent the subtitle from wrapping */
+}
+
+.button-container {
+    margin-top: 15px; /* Space above the buttons */
+}
+
+/* Change font sizes for header elements */
+.header-title {
+    font-size: 22px; /* Adjust to your desired size */
+    font-weight: normal;
+}
+
+.header-subtitle {
+    font-size: 35px; /* Adjust to your desired size */
+    font-weight: bold;
+}
+
+.header-location {
+    font-size: 22px; /* Adjust to your desired size */
+    color: #555; /* You can also change the color if needed */
+}
+
+/* Additional button styles */
+.header-button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+    background-color: #0056b3;
+}
+
+/* Navigation Container */
+.nav-container {
+    position: fixed; /* Fix the nav bar at the top */
+    top: 0; /* Align to the top */
+    left: 50%; /* Center align */
+    transform: translateX(-50%); /* Adjust positioning */
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 10px; /* Padding around nav items */
+    border-radius: 20px; /* Rounded corners for nav container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.nav-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 17px; /* Adjust to your desired size */
+}
+
+.nav-container ul li {
+    display: inline; /* Display items inline */
+    margin: 0 10px; /* Space between items */
+}
+
+.nav-container ul li a {
+    display: inline-block; /* Make the links behave like buttons */
+    padding: 10px 10px; /* Padding around links */
+    border-radius: 20px; /* Rounded corners for links */
+    background: rgba(255, 255, 255, 0.9);
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.nav-container ul li a:hover {
+    background-color: #e2e2e2; /* Background color on hover */
+    color: #000000; /* Change text color on hover */
+}
+
+/* Dark Mode Button Container */
+.dark-mode-container {
+    position: fixed; /* Fix the button at the top */
+    top: 60px; /* Position below the nav bar */
+    left: 50%; /* Center align */
+    transform: translateX(-50%); /* Adjust positioning */
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 10px; /* Padding around button */
+    border-radius: 8px; /* Rounded corners for button container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 0;
+    background-color: #fff;
     margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-h2 {
-    color: #333;
+.section:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Styles */
+.experience-card, .project-card {
+    background-color: #e2e2e2;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.experience-card:hover, .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styles */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Input Fields */
+input[type="email"],
+input[type="text"],
+textarea {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #007BFF; /* Change border color on focus */
+}
+
+/* Button Styles */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }

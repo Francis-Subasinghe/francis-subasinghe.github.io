@@ -6,37 +6,134 @@
     <meta name="description" content="Portfolio of Francis Subasinghe">
     <title>Francis Subasinghe - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- AOS Library for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-    <header>
-        <h1>Francis Subasinghe</h1>
+    <div class="background-grid">
+        <!-- Creating grid cells for interaction -->
+        <div class="grid-cube"></div>
+        <div class="grid-cube"></div>
+        <div class="grid-cube"></div>
+        <!-- Repeat this for more cubes -->
+    </div>
+    <div class="main-header">
+        <div class="header-content">
+            <p class="header-title">Hi, I'm Francis</p>
+            <p class="header-subtitle">Software Engineer</p>
+            <p class="header-location">Based in London</p>
+            <div class="button-container">
+                <a href="https://medium.com/@francissubasinghe" target="_blank" class="header-button">Blog</a>
+                <a href="#contact-form" class="header-button">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-container">
         <nav>
             <ul>
                 <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact-form">Contact</a></li>
+                <li><button id="theme-toggle">Dark Mode</button></li>
             </ul>
         </nav>
-    </header>
+    </div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I am Francis Subasinghe, a passionate Data Scientist and Software Engineer...</p>
-    </section>
+    <div class="container" id="about">
+        <h2 class="section-heading">About Me</h2>
+        <p>Hello! I am Francis Subasinghe, a passionate Data Scientist and Software Engineer with expertise in AI, Machine Learning, and Software Development.</p>
+        <p>I hold an MSc in Big Data Technologies (Distinction) from the University of Westminster, and a BEng (Hons) in Software Engineering.</p>
+    </div>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Project 1: AI-Powered Resume Builder</h3>
-            <p>A web app that assists users in building resumes powered by AI...</p>
+    <div class="container" id="experience">
+        <h2 class="section-heading">Professional Experience</h2>
+        <div class="experience-card" data-aos="fade-up">
+            <h3>AI & Data Scientist (Internship) - Otermans Institute</h3>
+            <p>2024 – Present | London, UK</p>
+            <ul>
+                <li>Developed Scholar Project using Python, Semantic Scholar API, and NLP to create custom GPT models, improving research efficiency by 20%.</li>
+                <li>Built a child-friendly quiz game using Python and Unsplash API, boosting quiz completion by 15%.</li>
+                <li>Trained predictive models in education, improving accuracy by 12% through regression analysis and cross-validation techniques.</li>
+            </ul>
         </div>
-    </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    </section>
+        <div class="experience-card" data-aos="fade-up">
+            <h3>Software Engineer (Internship) - Sri Lanka Telecom Mobitel</h3>
+            <p>2021 – 2022 | Colombo, Sri Lanka</p>
+            <ul>
+                <li>Designed software solutions using Python, Flask, and TensorFlow, increasing system efficiency by 20%.</li>
+                <li>Improved data processing speed by 15% with SQL Server and PowerBI.</li>
+                <li>Optimized UI for mobile platforms using Angular and JavaScript, boosting user engagement by 10%.</li>
+            </ul>
+        </div>
+    </div>
 
+    <div class="container" id="projects">
+        <h2 class="section-heading">Projects</h2>
+        <div class="project-card" data-aos="zoom-in">
+            <h3>Forecasting Financial Performance in SaaS Startups</h3>
+            <p>Developed a predictive model using Python, Pandas, and Scikit-learn, improving R² score from 0.4081 to 0.8893 with GradientBoostingRegressor and Stacking Regressor.</p>
+        </div>
+
+        <div class="project-card" data-aos="zoom-in">
+            <h3>Resume Classifier with Flask & Machine Learning</h3>
+            <p>Led development of a web app that classifies resumes into job categories (e.g., Data Scientist, Software Engineer) using Flask, Scikit-learn, and SpaCy.</p>
+        </div>
+
+        <div class="project-card" data-aos="zoom-in">
+            <h3>Analyzing Reddit Sentiments on Tesla Models</h3>
+            <p>Used neural networks and gradient boosting to identify 5 sentiment trends, leveraging PRAW, NLTK, Matplotlib, and Seaborn for visualization.</p>
+        </div>
+
+        <div class="project-card" data-aos="zoom-in">
+            <h3>Frapto Predict - Cryptocurrency Price Forecasting</h3>
+            <p>Built an LSTM model using TensorFlow and Twitter data, improving forecasting accuracy by 18%.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-heading">Contact</h2>
+        <form id="contact-form">
+            <label for="user-email">Your Email:</label>
+            <input type="email" id="user-email" name="user-email" required>
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Success Message -->
+        <div id="success-message" class="hidden">Your message has been sent successfully!</div>
+
+        <!-- Contact Info -->
+        <p>Email: <a href="mailto:imeshshenal1222@gmail.com">imeshshenal1222@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/Francis-Subasinghe" target="_blank">github.com/Francis-Subasinghe</a></p>
+        <p>Medium: <a href="https://medium.com/@francissubasinghe" target="_blank">medium.com/@francissubasinghe</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/francis-subasinghe" target="_blank">linkedin.com/in/francis-subasinghe</a></p>
+    </div>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "66fIEDmf1tt-gIMdr",
+            });
+        })();
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>
